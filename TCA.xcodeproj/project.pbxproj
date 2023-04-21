@@ -14,6 +14,8 @@
 		F18E29D329EFE7C900F5DA3F /* TCATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18E29D229EFE7C900F5DA3F /* TCATests.swift */; };
 		F18E29DD29EFE7C900F5DA3F /* TCAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18E29DC29EFE7C900F5DA3F /* TCAUITests.swift */; };
 		F18E29DF29EFE7C900F5DA3F /* TCAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18E29DE29EFE7C900F5DA3F /* TCAUITestsLaunchTests.swift */; };
+		F18E29ED29EFE83900F5DA3F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = F18E29EC29EFE83900F5DA3F /* ComposableArchitecture */; };
+		F18E29F029EFECB600F5DA3F /* ChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18E29EF29EFECB600F5DA3F /* ChildView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 		F18E29D829EFE7C900F5DA3F /* TCAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18E29DC29EFE7C900F5DA3F /* TCAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAUITests.swift; sourceTree = "<group>"; };
 		F18E29DE29EFE7C900F5DA3F /* TCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F18E29EF29EFECB600F5DA3F /* ChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F18E29ED29EFE83900F5DA3F /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +101,7 @@
 			children = (
 				F18E29C029EFE7C700F5DA3F /* TCAApp.swift */,
 				F18E29C229EFE7C700F5DA3F /* ContentView.swift */,
+				F18E29EF29EFECB600F5DA3F /* ChildView.swift */,
 				F18E29C429EFE7C900F5DA3F /* Assets.xcassets */,
 				F18E29C629EFE7C900F5DA3F /* TCA.entitlements */,
 				F18E29C729EFE7C900F5DA3F /* Preview Content */,
@@ -145,6 +150,9 @@
 			dependencies = (
 			);
 			name = TCA;
+			packageProductDependencies = (
+				F18E29EC29EFE83900F5DA3F /* ComposableArchitecture */,
+			);
 			productName = TCA;
 			productReference = F18E29BD29EFE7C700F5DA3F /* TCA.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +225,9 @@
 				Base,
 			);
 			mainGroup = F18E29B429EFE7C700F5DA3F;
+			packageReferences = (
+				F18E29EB29EFE83900F5DA3F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = F18E29BE29EFE7C700F5DA3F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +272,7 @@
 			files = (
 				F18E29C329EFE7C700F5DA3F /* ContentView.swift in Sources */,
 				F18E29C129EFE7C700F5DA3F /* TCAApp.swift in Sources */,
+				F18E29F029EFECB600F5DA3F /* ChildView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F18E29EB29EFE83900F5DA3F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.52.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F18E29EC29EFE83900F5DA3F /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F18E29EB29EFE83900F5DA3F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F18E29B529EFE7C700F5DA3F /* Project object */;
 }
